@@ -1,0 +1,40 @@
+<header class="b text-white">
+    <br>
+    <h2 class="t fw-bold" [ngClass]="{'text-white': temaEscuro}">The bare relevant minimum you need to know about Star
+        Wars</h2>
+    <input class="form-switch" type="checkbox" role="switch" id="flexSwitchCheckChecked" [(ngModel)]="temaEscuro">
+</header>
+
+<div>
+    <app-carregando *ngIf="!facade.carregando"></app-carregando>
+</div>
+
+<body [ngClass]="{'body': temaEscuro}">
+    <div class="container">
+        <div class="card-body">
+            <div class="cols">
+                <div class="row ">
+                    <div class="col">
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div *ngFor="let item of itens">
+                                <div class="card-body justificando" [ngClass]="{'text-white': temaEscuro}">
+                                    <h5 class="card-title"> {{item.title}}</h5>
+                                    <hr>
+                                    <p class="card-text">{{item.opening_crawl}}</p>
+                                    <p class="card-text">Director: {{item.director}}</p>
+                                    <p class="card-text"></p>
+                                    <button type="button" class="btn btn-outline-dark" *ngIf="!temaEscuro"
+                                        (click)="pesquisar(item.characters)">More Information</button>
+                                    <button type="button" class="btn btn-outline-light" *ngIf="temaEscuro"
+                                        (click)="pesquisar(item.characters)">More Information</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+</footer>

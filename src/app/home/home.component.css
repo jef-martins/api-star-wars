@@ -1,0 +1,39 @@
+.t {
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.justificando {
+    text-align: justify;
+}
+
+.m {
+    margin: 40px;
+}
+.textoesquerda {
+    text-align: left;
+}
+
+.b {
+    background-color: #7952b3;
+    text-align: center;
+}
+
+.body {
+    background-color: rgb(54, 49, 58);
+}
+
+.alinhamentoBotaozinho {
+    align-items: center flex-start;
+}
+
+.aqui {
+    margin: 20px;
+}
+
+button {
+    font-weight: 600;
+    color: #fff;
+    background-color: #7952b3;
+    border-color: #7952b3;
+}

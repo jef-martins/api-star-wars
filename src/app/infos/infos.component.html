@@ -1,0 +1,35 @@
+<div class="">
+  <div>
+    <app-carregando *ngIf="!facade.carregando"></app-carregando>
+  </div>
+</div>
+
+<div class="" *ngIf="facade.carregando">
+  <div class="">
+    <table class="table caption-top">
+      <caption class="text" [ngClass]="{'fundo': temaEscuro, 'text-white': temaEscuro}"> Dark Mode 
+        <input class="form-switch" type="checkbox" role="switch" id="flexSwitchCheckChecked" [(ngModel)]="temaEscuro">
+      </caption>
+      <thead class="cor">
+        <tr class="text-white">
+          <th scope="col"> </th>
+          <th scope="col">Characters</th>
+          <th scope="col">Birthday</th>
+          <th scope="col">Planets</th>
+          <th scope="col">Starships</th>
+          <th scope="col">Vehicles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr [ngClass]="{'fundo': temaEscuro, 'text-white': temaEscuro}" *ngFor="let item of itens">
+          <th class="mar" scope="row"> </th>
+          <td>{{item.name}}</td>
+          <td>{{item.birth_year}}</td>
+          <td>{{item.homeworld}}</td>
+          <td>{{item.starships[0]}}</td>
+          <td>{{item.vehicles[0]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

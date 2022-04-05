@@ -1,0 +1,16 @@
+.mar {
+    margin-left: 20px;
+}
+
+.fundo {
+    background-color: rgb(54, 49, 58);
+}
+
+.cor {
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+
+.text{
+    text-align: center;
+}
