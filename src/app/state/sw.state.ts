@@ -15,6 +15,7 @@ export class SwState {
     films: BehaviorSubject<Filme[]> = new BehaviorSubject<Filme[]>([])
     characters: BehaviorSubject<Ator[]> = new BehaviorSubject<Ator[]>([])
     //outros: BehaviorSubject<any> = new BehaviorSubject<any>(null)
+    
 
 
     constructor() { }

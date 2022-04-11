@@ -2,7 +2,7 @@
     <br>
     <h2 class="t fw-bold" [ngClass]="{'text-white': temaEscuro}">The bare relevant minimum you need to know about Star
         Wars</h2>
-    <input class="form-switch" type="checkbox" role="switch" id="flexSwitchCheckChecked" [(ngModel)]="temaEscuro">
+    <input class="form-switch" type="checkbox" role="switch" id="flexSwitchCheckChecked" (click)="setTema()" [(ngModel)]="temaEscuro">
 </header>
 
 <div>

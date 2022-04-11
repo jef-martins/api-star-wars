@@ -1,7 +1,5 @@
 import { SwFacade } from './../state/sw.facade';
-import { Component, Input, OnInit } from '@angular/core';
-import { ConteudoComponent } from '../conteudo/conteudo.component';
-import { InfosComponent } from '../infos/infos.component';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Filme } from '../model/sw.model';
 import { Router } from '@angular/router';
 
@@ -15,8 +13,8 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   public carregando = false;
-  //temaEscuro = localStorage.setItem('temaEscuro', 'false');
-  temaEscuro = false;
+  temaEscuro1:any;
+  temaEscuro = (localStorage.getItem('temaEscuro') || false) == 'false' ? false : true;
 
 
   @Input() itens: Filme[] = [];
@@ -24,17 +22,18 @@ export class HomeComponent implements OnInit {
   constructor(public facade: SwFacade, private router: Router) { }
 
   ngOnInit(): void {
-    //console.log(this.temaEscuro)
     this.facade.getFilmes();
     this.facade.films$.subscribe((res) => {
       console.log(res)
       this.itens = res;
     })
   }
-  //   onCarregando(infos: string){
-  //     const response = this.pesquisar + infos;
-  //     return response;
-  // }
+
+
+  
+  setTema(){
+    this.temaEscuro1 = localStorage.setItem('temaEscuro', (!this.temaEscuro).toString());
+  }
 
   onCarregando(event: any) {
    this.itens = event;

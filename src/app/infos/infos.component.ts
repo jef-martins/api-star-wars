@@ -14,7 +14,7 @@ export class InfosComponent implements OnInit {
   url = 'https://swapi.dev/api/films/';
   itens: Ator[] =[];
   public carregando = false;
-  temaEscuro = false
+  temaEscuro = (localStorage.getItem('temaEscuro') || false) == 'false' ? false : true;
   
   @Output() onSubmit: EventEmitter<string> = new EventEmitter<string>();
 

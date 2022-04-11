@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ConteudoComponent } from './conteudo/conteudo.component';
 import { InfosComponent } from './infos/infos.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CarregandoComponent } from './carregando/carregando.component';
@@ -19,7 +18,6 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ConteudoComponent,
     InfosComponent,
     CarregandoComponent
   ],
